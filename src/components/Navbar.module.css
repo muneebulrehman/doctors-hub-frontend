@@ -1,0 +1,17 @@
+.sidebar{
+  height: 100%;
+  width: 15rem;
+  z-index: 100;
+}
+
+.logo{
+  margin: 2rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem
+
+}
+
