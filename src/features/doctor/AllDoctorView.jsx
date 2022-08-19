@@ -6,7 +6,7 @@ import { fetchDoctors } from './doctorSlice';
 import './styles.css';
 
 const AllDoctorView = () => {
-    const Doctors = useSelector((state) => state.doctor.doctor);
+    const Doctors = useSelector((state) => state.doctor);
 
     const dispatch = useDispatch();
     const [Doctors, setDoctor] = useState(null);

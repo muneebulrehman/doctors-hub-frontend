@@ -5,10 +5,10 @@ import api from '../../config';
 const initialState = {
   doctors: [],
   doctor: {},
-  loading: false,
+  loading: false
 };
 
-export const fetchDoctors = createAsyncThunk(`doctor/fetchDoctors`, async () => {
+export const fetchDoctors = createAsyncThunk('doctor/fetchDoctors', async () => {
   const response = await fetch(`${api}doctors`);
   const doctors = await response.json();
   return doctors;
@@ -43,7 +43,6 @@ const doctorSlice = createSlice({
       state.loading = false;
       state.error = '';
     });
-  },
+  }
 });
-
 export default doctorSlice.reducer;
