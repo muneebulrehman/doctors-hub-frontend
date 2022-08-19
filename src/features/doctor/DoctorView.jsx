@@ -3,8 +3,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
 
 import './styles.css';
-import Loader from '../../components/Loader';
-import { fetchSingleDoctor } from '../../actions/doctor';
+// import Loader from '../../components/Loader';
+import { fetchSingleDoctor } from './doctorSlice';
 
 
 const DoctorView = () => {
@@ -16,9 +16,9 @@ const DoctorView = () => {
       dispatch(fetchSingleDoctor(doctorId));
     }, []);
   
-    if (loading) {
-      return <Loader />;
-    }
+    // if (loading) {
+    //   return <Loader />;
+    // }
 
     return (
         <div className="doctorView-container">
@@ -36,7 +36,7 @@ const DoctorView = () => {
             <h6 style={{ textAlign: 'left', fontWeight: 'bold' }}>Bio</h6>
             <p style={{ textAlign: 'left' }}>{doctor.bio}</p>
             <Link to="/new_appointment" className="doctorView-reserve">
-              Book appointment
+              Book An Appointment
             </Link>
           </div>
         </div>
