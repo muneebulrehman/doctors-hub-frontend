@@ -5,8 +5,8 @@ function App() {
   return (
     <div className="App">
       <h1>Hello</h1>
-        <Route path={routesApp.DOCTORS} element={<AllDoctorView />} />
-        <Route path={routesApp.DOCTOR} element={<DoctorView />} />
+        {/* <Route path={routesApp.DOCTORS} element={<AllDoctorView />} />
+        <Route path={routesApp.DOCTOR} element={<DoctorView />} /> */}
     </div>
   );
 }
