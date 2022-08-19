@@ -23,11 +23,11 @@ const DoctorView = () => {
     return (
         <div className="doctorView-container">
           <div className="doctorView-image-container">
-            <img
+            {/* <img
               src={doctor.photo}
               alt={doctor.name}
               className="doctorView-image"
-            />
+            /> */}
           </div>
           <div className="doctorView-info">
             <h4>{doctor.name}</h4>
