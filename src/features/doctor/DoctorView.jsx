@@ -9,7 +9,7 @@ import { fetchSingleDoctor } from './doctorSlice';
 
 const DoctorView = () => {
     const doctor = useSelector((state) => state.doctor.doctor);
-    const loading = useSelector((state) => state.doctor.loading);
+    // const loading = useSelector((state) => state.doctor.loading);
     const dispatch = useDispatch();
     const { doctorId } = useParams();
     useEffect(() => {
@@ -23,11 +23,11 @@ const DoctorView = () => {
     return (
         <div className="doctorView-container">
           <div className="doctorView-image-container">
-            {/* <img
+            <img
               src={doctor.photo}
               alt={doctor.name}
               className="doctorView-image"
-            /> */}
+            />
           </div>
           <div className="doctorView-info">
             <h4>{doctor.name}</h4>
