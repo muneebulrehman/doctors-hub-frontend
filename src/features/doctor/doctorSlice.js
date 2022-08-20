@@ -11,7 +11,6 @@ const initialState = {
 export const fetchDoctors = createAsyncThunk('doctor/fetchDoctors', async () => {
   const response = await fetch(`${api}doctors`);
   const doctors = await response.json();
-  console .log(doctors);
   return doctors;
 });
 
