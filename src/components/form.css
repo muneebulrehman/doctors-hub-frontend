@@ -11,15 +11,12 @@
   gap: 1rem;
 }
 
-.main-form input{
-  background-color: aquamarine;
-}
-
 .main-form input {
   outline: none;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 8px;
+  background-color: aquamarine;
 }
 
 .reg-form input {
