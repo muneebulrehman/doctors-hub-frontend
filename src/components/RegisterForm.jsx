@@ -22,7 +22,7 @@ const RegisterForm = () => {
 
   useEffect(() => {
     if (userExists && userExists.success) {
-      nav('/doctors');
+      nav('/');
     }
   }, [userExists]);
   return (

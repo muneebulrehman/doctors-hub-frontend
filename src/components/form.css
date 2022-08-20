@@ -11,6 +11,10 @@
   gap: 1rem;
 }
 
+.main-form input{
+  background-color: aquamarine;
+}
+
 .main-form input {
   outline: none;
   border: none;

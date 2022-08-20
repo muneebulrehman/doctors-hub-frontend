@@ -20,9 +20,9 @@ const LoginForm = () => {
   };
   useEffect(() => {
     if (userExists && userExists.success) {
-      nav('/doctors');
-      localStorage.setItem('user_name', userExists.user[0].user_name);
-      localStorage.setItem('user_id', userExists.user[0].id);
+      nav('/');
+      localStorage.setItem('username', userExists.user.username);
+      localStorage.setItem('user_id', userExists.user.id);
     }
   }, [userExists]);
 

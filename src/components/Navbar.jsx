@@ -8,7 +8,7 @@ import styles from './Navbar.module.css';
 import { userLogout } from '../features/user/userSlice';
 
 const Navbar = () => {
-  const [menu, setMenu] = useState(false);
+  const [menu, setMenu] = useState(true);
   const dispatch = useDispatch();
   const nav = useNavigate();
   const userLoggedIn = useSelector((state) => state.user.user);
@@ -53,7 +53,7 @@ const Navbar = () => {
         </p>
       </div>
       <div className={styles.navlinks}>
-        <NavLink to="/doctors">Doctors</NavLink>
+        <NavLink to="/">Doctors</NavLink>
         <NavLink to="/appointments">Appointments</NavLink>
         <NavLink to="/create-appointment">Reserve appointment</NavLink>
         {!user ? (
