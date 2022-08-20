@@ -1,4 +1,4 @@
-.sidebar{
+.sidebar {
   height: 100%;
   width: 18rem;
   z-index: 100;
@@ -7,56 +7,57 @@
   flex-direction: column;
 }
 
-.logo{
+.logo {
   font-size: 1.25rem;
   font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  padding-left:1rem;
-
+  padding-left: 1rem;
 }
 
-.hamburger{
+.hamburger {
   padding: 1rem;
   font-size: 2rem;
   cursor: pointer;
+  width: fit-content;
 }
 
-.closeBtn{
+.closeBtn {
   padding: 1rem 2rem;
-  background-color: #97bf0f; 
+  background-color: #97bf0f;
   color: white;
   font-size: 2rem;
   border-top-left-radius: 40%;
   border-bottom-left-radius: 40%;
 }
 
-.navlinks{
+.navlinks {
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 1rem 0rem;
+  padding: 1rem 0;
   font-size: 1.2rem;
   font-weight: bold;
 }
-.navlinks a{
+
+.navlinks a {
   padding: 1rem 2rem;
   text-decoration: none;
   text-align: center;
   color: black;
 }
 
-.footer{
+.footer {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 
-.logoutbtn{
+.logoutbtn {
   border: none;
   background-color: #fd3f3f;
   width: 100%;
@@ -66,30 +67,30 @@
   cursor: pointer;
 }
 
-.logoutbtn:hover{
+.logoutbtn:hover {
   background-color: #ec1616;
 }
 
-.icons{
+.icons {
   display: flex;
   justify-content: space-around;
   padding: 1rem 0;
 }
-.icons span{
-  padding: .5rem;
+
+.icons span {
+  padding: 0.5rem;
 }
 
-.icons span :hover{
+.icons span :hover {
   color: #97bf0f;
 }
 
-.icons svg{
+.icons svg {
   cursor: pointer;
 }
 
-.footerText{
+.footerText {
   text-align: center;
-  font-size: .75rem;
-  margin-bottom: .75rem;
+  font-size: 0.75rem;
+  margin-bottom: 0.75rem;
 }
-

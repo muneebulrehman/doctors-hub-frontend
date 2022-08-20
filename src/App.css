@@ -2,7 +2,8 @@
   width: 100vw;
   height: 100vh;
 }
-.active{
+
+.active {
   background-color: #97bf0f;
   color: white !important;
 }
