@@ -21,7 +21,7 @@ export const signUp = createAsyncThunk('user/signUp', async (user) => {
 });
 
 export const login = createAsyncThunk('user/login', async (user) => {
-  const response = await fetch(`${api}/user/login`, {
+  const response = await fetch(`${api}/login`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

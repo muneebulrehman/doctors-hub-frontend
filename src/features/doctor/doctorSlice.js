@@ -14,14 +14,11 @@ export const fetchDoctors = createAsyncThunk('doctor/fetchDoctors', async () => 
   return doctors;
 });
 
-export const fetchSingleDoctor = createAsyncThunk(
-  'doctor/fetchSingleDoctor',
-  async (id) => {
-    const response = await fetch(`${api}doctor/${id}`);
-    const doctor = await response.json();
-    return doctor;
-  }
-);
+export const fetchSingleDoctor = createAsyncThunk('doctor/fetchSingleDoctor', async (id) => {
+  const response = await fetch(`${api}doctors/${id}`);
+  const doctor = await response.json();
+  return doctor;
+});
 
 const doctorSlice = createSlice({
   name: 'doctor',
