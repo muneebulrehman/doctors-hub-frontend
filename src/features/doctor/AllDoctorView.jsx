@@ -19,14 +19,6 @@ const AllDoctorView = () => {
     dispatch(fetchDoctors());
   }, []);
 
-  useEffect(() => {
-    handleDoctors();
-  }, [doctors]);
-
-  useEffect(() => {
-    handleDoctors();
-  }, [doctorsNumber]);
-
   const handleDoctors = () => {
     if (doctors && doctorsNumber[0] === 0) {
       setDisplayDoctors(doctors.slice(doctorsNumber[0], doctorsNumber[1]));
@@ -35,6 +27,14 @@ const AllDoctorView = () => {
       setDisplayDoctors(doctors.slice(doctorsNumber[0], doctorsNumber[1]));
     }
   };
+
+  useEffect(() => {
+    handleDoctors();
+  }, [doctors]);
+
+  useEffect(() => {
+    handleDoctors();
+  }, [doctorsNumber]);
 
   if (loading) {
     return <Loader />;

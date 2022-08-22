@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { BiLeftArrow } from 'react-icons/bi';
-import { useNavigate } from 'react-router-dom';
 
 import './doctors.css';
 // import Loader from '../../components/Loader';
@@ -26,7 +25,7 @@ const DoctorView = () => {
   return (
     <div className="doctorView-container">
       <p className="p2">
-        <button onClick={() => nav(-1)} className="pg-btn pg-btn-left">
+        <button type="button" onClick={() => nav(-1)} className="pg-btn pg-btn-left">
           <BiLeftArrow />
         </button>
       </p>
@@ -35,7 +34,7 @@ const DoctorView = () => {
           <img src={doctor.photo} alt={doctor.name} className="doctorView-image" />
         </div>
         <div className="doctorView-info">
-          <h3>{doctor.name}</h3>
+          <h2>{doctor.name}</h2>
           <p style={{ fontWeight: 'bold', marginTop: '.75rem' }}>{doctor.speciality}</p>
           <div className="p1">
             <p>Price: $</p>

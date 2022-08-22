@@ -2,7 +2,7 @@
   margin: 3rem auto;
 }
 
-.allDoctors-subcontainer{
+.allDoctors-subcontainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,14 +10,13 @@
   gap: 3rem;
 }
 
-.displayDoctors-container{
+.displayDoctors-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
 }
 
-.pg-btn{
+.pg-btn {
   border: none;
   background-color: #97bf0f;
   color: white;
@@ -26,17 +25,17 @@
   cursor: pointer;
 }
 
-.pg-btn:disabled{
+.pg-btn:disabled {
   background-color: #d3d3d3;
   cursor: not-allowed;
 }
 
-.pg-btn-left{
+.pg-btn-left {
   border-top-right-radius: 40%;
   border-bottom-right-radius: 40%;
 }
 
-.pg-btn-right{
+.pg-btn-right {
   border-top-left-radius: 40%;
   border-bottom-left-radius: 40%;
 }
@@ -75,9 +74,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: .75rem;
+  gap: 0.75rem;
 }
-
 
 @media screen and (min-width: 768px) {
   .allDoctors-list {
@@ -91,11 +89,12 @@
     height: 250px;
     border-radius: 50%;
   }
-  .allDoctors-subcontainer{
-  display: flex;
-  flex-direction: row;
-  gap: 6rem;
-}
+
+  .allDoctors-subcontainer {
+    display: flex;
+    flex-direction: row;
+    gap: 6rem;
+  }
 }
 
 /* Styling for DoctorView */
@@ -103,8 +102,10 @@
 .doctorView-container {
   margin: 3rem auto;
   padding: 0 2rem;
+
   /* display: flex;
   flex-direction: column;  */
+
   /* gap: 2rem;  */
 }
 
@@ -112,6 +113,13 @@
   width: 160px;
   height: 160px;
   border-radius: 50%;
+}
+
+.doctorView-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
 .doctorView-info {
@@ -127,22 +135,23 @@
   margin: 2rem auto 0;
   color: white;
 }
-.p1{
+
+.p1 {
   display: flex;
   justify-content: space-between;
-  padding: .5rem .25rem;
+  padding: 0.5rem 0.25rem;
   font-weight: bold;
-  margin-top: .75rem;
+  margin-top: 0.75rem;
   background-color: rgb(235, 235, 235);
-  
 }
-.doctor-bio{
+
+.doctor-bio {
   width: 18rem;
   text-align: left;
   margin-top: 1rem;
 }
 
-.p2{
+.p2 {
   display: none;
 }
 
@@ -153,7 +162,7 @@
     align-items: center;
   }
 
-  .doctorView-subContainer{
+  .doctorView-subContainer {
     display: flex;
     flex-direction: row;
     gap: 2rem;
@@ -166,7 +175,8 @@
     width: 320px;
     height: 320px;
   }
-  .p2{
+
+  .p2 {
     display: block;
   }
 }
