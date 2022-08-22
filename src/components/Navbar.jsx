@@ -53,13 +53,23 @@ const Navbar = () => {
         </p>
       </div>
       <div className={styles.navlinks}>
-        <NavLink to="/">Doctors</NavLink>
-        <NavLink to="/appointments">Appointments</NavLink>
-        <NavLink to="/create-appointment">Reserve appointment</NavLink>
+        <NavLink to="/" onClick={() => toggleMenu()}>
+          Doctors
+        </NavLink>
+        <NavLink to="/appointments" onClick={() => toggleMenu()}>
+          Appointments
+        </NavLink>
+        <NavLink to="/create-appointment" onClick={() => toggleMenu()}>
+          Reserve appointment
+        </NavLink>
         {!user ? (
           <>
-            <NavLink to="/login">LOG IN</NavLink>
-            <NavLink to="/register">SIGN UP</NavLink>
+            <NavLink to="/login" onClick={() => toggleMenu()}>
+              LOG IN
+            </NavLink>
+            <NavLink to="/register" onClick={() => toggleMenu()}>
+              SIGN UP
+            </NavLink>
           </>
         ) : (
           ''
@@ -67,7 +77,12 @@ const Navbar = () => {
       </div>
       <div className={styles.footer}>
         {user ? (
-          <button className={styles.logoutbtn} onClick={logout}>
+          <button
+            type="button"
+            className={styles.logoutbtn}
+            onClick={() => {
+              logout(), toggleMenu();
+            }}>
             Logout
           </button>
         ) : (

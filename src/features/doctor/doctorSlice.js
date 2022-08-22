@@ -5,7 +5,8 @@ import api from '../../config';
 const initialState = {
   doctors: [],
   doctor: {},
-  loading: false
+  loading: false,
+  dp: []
 };
 
 export const fetchDoctors = createAsyncThunk('doctor/fetchDoctors', async () => {
@@ -23,6 +24,11 @@ export const fetchSingleDoctor = createAsyncThunk('doctor/fetchSingleDoctor', as
 const doctorSlice = createSlice({
   name: 'doctor',
   initialState,
+  reducers: {
+    displayPagination: (state, action) => {
+      state.dp = action.payload;
+    }
+  },
   extraReducers: (builder) => {
     builder.addCase(fetchDoctors.pending, (state) => {
       state.loading = true;
