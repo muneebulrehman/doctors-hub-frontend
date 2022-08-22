@@ -67,7 +67,7 @@ const Navbar = () => {
       </div>
       <div className={styles.footer}>
         {user ? (
-          <button className={styles.logoutbtn} onClick={logout}>
+          <button type="button" className={styles.logoutbtn} onClick={logout}>
             Logout
           </button>
         ) : (
