@@ -8,7 +8,7 @@ const initialState = {
 };
 
 export const userAppointments = createAsyncThunk('appointment/userAppointments', async (user) => {
-  const response = await fetch(`${api}appointments/${user.id}`);
+  const response = await fetch(`${api}appointments?user_id=${user}`);
   const data = await response.json();
   return data;
 });

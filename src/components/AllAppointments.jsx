@@ -5,7 +5,6 @@ import { userAppointments } from '../features/appointment/appointmentSlice';
 const AllAppointments = () => {
     const dispatch = useDispatch();
     const appointments = useSelector((state) => state.appointment.appointments);
-    console.log(appointments);
     const [userId, setUserId] = useState();
   
     useEffect(() => {
@@ -35,4 +34,3 @@ const AllAppointments = () => {
     };
     
     export default AllAppointments;
-    
