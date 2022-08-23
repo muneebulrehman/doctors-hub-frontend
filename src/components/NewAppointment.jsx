@@ -1,45 +1,59 @@
-import React, {useState, useEffect, useSyncExternalStore} from 'react'
-import { useDispatch, useSelector } from 'react-redux/es/exports';
-import {useParams} from 'react-router-dom'
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux/es/exports';
+import Select from 'react-select';
 import { createAppointment } from '../features/appointment/appointmentSlice';
-import { fetchDoctors } from '../features/doctor/doctorSlice';
 
+const NewAppointment = () => {
+  const [date, setDate] = useState('');
+  const [doctorId, setDoctorId] = useState('');
+  const dispatch = useDispatch();
 
- const NewAppointment = () => {
-    const {id} = useParams()
-    const [date, setDate] = useState('');
-    const [doctorId, setDoctorId] = useState()
-    const dispatch = useDispatch();
-    const doctors = useSelector((state) => state.doctor.doctors);
-    if (id) {
-        setDoctorId(id)
-    }
-    useEffect(() => {
-        dispatch(fetchDoctors());
-    },[])
-    console.log(doctors)
-    const inputHandler = (e) => {
-        e.preventDefault();
-    }
+  const options = [
+    { value: '1', label: 'Dr. Anthony Fauci' },
+    { value: '2', label: 'Dr. Rochelle Walensky' },
+    { value: '3', label: 'Dr. Sanjay Gupta' },
+    { value: '4', label: 'Dr. Laurie Glimcher' },
+    { value: '5', label: 'Dr. Mark Hyman' },
+    { value: '6', label: 'Dr. Fouad. M. Abbas' }
+  ];
+
+  const inputHandler = (e) => {
+    e.preventDefault();
+    const user = {
+      user_id: localStorage.getItem('user_id'),
+      doctor_id: doctorId,
+      date
+    };
+    console.log(user);
+    dispatch(createAppointment(user));
+  };
+
+  const handleOptions = (option) => {
+    setDoctorId(option.value);
+  };
+
+  if (!localStorage.getItem('user_id')) {
+    return (
+      <div className="newAppointment-warning">
+        <h2>Please login to make an appointment</h2>
+      </div>
+    );
+  }
+
   return (
     <div className="newAppointments-container">
-        <h2>Book an appointment with your doctor</h2>
-        <hr />
-        <h3>There are a lot of doctors. Choose one</h3>
-        <form onSubmit={inputHandler} className="newAppointment-form">
-            <label htmlFor="doctors" >Choose a doctor</label>
-            <select name="doctors" id="doctors" value="Choose a doctor" onChange={e  => setDoctorId(e.target.value)}>
-                <option value={null} >Choose a doctor</option>
-                {doctors.map(doctor => {
-                   return <option key={doctor.id} value={doctor.id}>{doctor.name}</option>
-                })}
-            </select>
-            <label htmlFor="date" >Choose a date</label>
-            <input type="date" id="date" name="date" onChange={e => setDate(e.target.value)} />
-            <button type="submit"> Create Appointment </button>
-        </form>
+      <h2>Book an appointment with your doctor</h2>
+      <hr />
+      <h3>There are a lot of doctors. Choose one</h3>
+      <form onSubmit={inputHandler} className="newAppointment-form">
+        <label htmlFor="doctors">Choose a doctor</label>
+        <Select options={options} onChange={handleOptions} />
+        <label htmlFor="date">Choose a date</label>
+        <input type="date" id="date" name="date" onChange={(e) => setDate(e.target.value)} />
+        <button type="submit"> Create Appointment </button>
+      </form>
     </div>
-  )
-}
+  );
+};
 
 export default NewAppointment;

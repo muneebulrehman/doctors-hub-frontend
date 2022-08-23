@@ -41,7 +41,7 @@ const DoctorView = () => {
           </div>
           <h3 style={{ textAlign: 'left', fontWeight: 'bold', marginTop: '1.25rem' }}>Bio</h3>
           <p className="doctor-bio">{doctor.bio}</p>
-          <Link to="/new_appointment" className="doctorView-reserve">
+          <Link to="/create-appointment" state={{ id: doctor.id }} className="doctorView-reserve">
             Book An Appointment ➡️
           </Link>
         </div>

@@ -17,7 +17,7 @@ function App() {
         <Route path="/doctors/:doctorId" element={<DoctorView />} />
         <Route path="/login" element={<LoginForm />} />
         <Route path="/register" element={<RegisterForm />} />
-        <Route path="/new_appointment" element={<NewAppointment/>} />
+        <Route path="/create-appointment" element={<NewAppointment />} />
       </Routes>
     </div>
   );
