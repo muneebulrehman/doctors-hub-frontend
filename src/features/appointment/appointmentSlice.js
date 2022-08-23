@@ -24,3 +24,13 @@ export const createAppointment = createAsyncThunk('appointment/createAppointment
     const data = await response.json()
     return data
 })
+
+const appointmentSlice = createSlice({
+    name: "appointment", 
+    initialState, 
+    extraReducers: (builder) =>{
+        builder.addCase(userAppointments.pending, (state) =>{
+            state.loading = true
+        })
+    }
+})
