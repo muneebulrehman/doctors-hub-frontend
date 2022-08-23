@@ -12,3 +12,15 @@ export const userAppointments = createAsyncThunk('appointment/userAppointments',
     const data = await response.json()
     return data
 })
+
+export const createAppointment = createAsyncThunk('appointment/createAppointment', async (data)=> {
+    const response = await fetch(`${api}appointments`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ doctor_id : data.doctor_id, date : data.date, user_id : data.user_id })
+      });    
+    const data = await response.json()
+    return data
+})
