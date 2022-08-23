@@ -32,5 +32,9 @@ const appointmentSlice = createSlice({
         builder.addCase(userAppointments.pending, (state) =>{
             state.loading = true
         })
+        builder.addCase(userAppointments.fulfilled, (state) =>{
+            state.loading = false;
+            state.appointments = action.payload;
+        })
     }
 })
