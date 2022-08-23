@@ -5,6 +5,7 @@ import DoctorView from './features/doctor/DoctorView';
 import LoginForm from './components/LoginForm';
 import RegisterForm from './components/RegisterForm';
 import Navbar from './components/Navbar';
+import NewAppointment from './components/NewAppointment';
 import './App.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/doctors/:doctorId" element={<DoctorView />} />
         <Route path="/login" element={<LoginForm />} />
         <Route path="/register" element={<RegisterForm />} />
+        <Route path="/new_appointment" element={<NewAppointment/>} />
       </Routes>
     </div>
   );

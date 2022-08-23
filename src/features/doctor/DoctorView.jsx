@@ -13,7 +13,6 @@ const DoctorView = () => {
   // const loading = useSelector((state) => state.doctor.loading);
   const dispatch = useDispatch();
   const { doctorId } = useParams();
-  console.log(doctorId);
   useEffect(() => {
     dispatch(fetchSingleDoctor(doctorId));
   }, []);
