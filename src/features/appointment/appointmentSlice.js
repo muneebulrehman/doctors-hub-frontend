@@ -45,3 +45,5 @@ const appointmentSlice = createSlice({
         })
     }
 })
+
+export default appointmentSlice.reducer
