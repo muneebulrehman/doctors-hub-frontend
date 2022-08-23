@@ -24,7 +24,6 @@ const NewAppointment = () => {
       doctor_id: doctorId,
       date
     };
-    console.log(user);
     dispatch(createAppointment(user));
   };
 
