@@ -1,13 +1,26 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux/es/exports';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux/es/exports';
+import { toast } from 'react-toastify';
 import Select from 'react-select';
 import { createAppointment } from '../features/appointment/appointmentSlice';
+import { userErrorClear, loginErrorClear } from '../features/user/userSlice';
 import './newappointment.css';
 
 const NewAppointment = () => {
   const [date, setDate] = useState('');
   const [doctorId, setDoctorId] = useState('');
   const dispatch = useDispatch();
+  const appointment = useSelector((state) => state.appointment.appointment);
+
+  useEffect(() => {
+    if (appointment.success) toast.success(appointment.message);
+    else toast.error(appointment.message);
+  }, [appointment]);
+
+  useEffect(() => {
+    dispatch(userErrorClear());
+    dispatch(loginErrorClear());
+  }, []);
 
   const options = [
     { value: '1', label: 'Dr. Anthony Fauci' },
@@ -18,7 +31,7 @@ const NewAppointment = () => {
     { value: '6', label: 'Dr. Fouad. M. Abbas' }
   ];
 
-  const inputHandler = (e) => {
+  const inputHandler = async (e) => {
     e.preventDefault();
     const user = {
       user_id: localStorage.getItem('user_id'),

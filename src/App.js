@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import AllDoctorsView from './features/doctor/AllDoctorView';
 import DoctorView from './features/doctor/DoctorView';
 import LoginForm from './components/LoginForm';
@@ -8,11 +9,13 @@ import Navbar from './components/Navbar';
 import NewAppointment from './components/NewAppointment';
 import AllAppointments from './components/AllAppointments';
 import './App.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
+      <ToastContainer />
       <Routes>
         <Route path="/" element={<AllDoctorsView />} />
         <Route path="/doctors/:doctorId" element={<DoctorView />} />

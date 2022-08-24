@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { userAppointments } from '../features/appointment/appointmentSlice';
+import { userAppointments, resetAppointment } from '../features/appointment/appointmentSlice';
 import './allappointments.css';
 import Loader from './loader/Loader';
+import { userErrorClear, loginErrorClear } from '../features/user/userSlice';
 
 const AllAppointments = () => {
   const dispatch = useDispatch();
@@ -13,6 +14,9 @@ const AllAppointments = () => {
   useEffect(() => {
     if (localStorage.getItem('user_id')) {
       setUserId(+localStorage.getItem('user_id'));
+      dispatch(resetAppointment());
+      dispatch(userErrorClear());
+      dispatch(loginErrorClear());
     }
   }, []);
 

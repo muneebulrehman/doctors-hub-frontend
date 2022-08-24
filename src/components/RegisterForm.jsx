@@ -1,12 +1,14 @@
 import React, { useRef, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-
-import { signUp } from '../features/user/userSlice';
+import { toast } from 'react-toastify';
+import { signUp, loginErrorClear } from '../features/user/userSlice';
 import './form.css';
 
 const RegisterForm = () => {
   const userExists = useSelector((state) => state.user.user);
+  const userError = useSelector((state) => state.user.error);
+  console.log(userExists);
   const dispatch = useDispatch();
   const nav = useNavigate();
   const name = useRef('name');
@@ -21,10 +23,22 @@ const RegisterForm = () => {
   };
 
   useEffect(() => {
+    dispatch(loginErrorClear());
+  }, []);
+
+  useEffect(() => {
     if (userExists && userExists.success) {
+      toast.success('User created successfully');
       nav('/');
     }
   }, [userExists]);
+
+  useEffect(() => {
+    if (userError && !userError.success) {
+      toast.error(userError.error);
+    }
+  }, [userError]);
+
   return (
     <div className="form-container">
       <form onSubmit={inputHandler} className="main-form reg-form ">
