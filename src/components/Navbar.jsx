@@ -3,7 +3,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { BiLeftArrow } from 'react-icons/bi';
 import { GiHamburgerMenu } from 'react-icons/gi';
-import { ImTwitter, ImFacebook, ImGooglePlus, ImVimeo, ImPinterest } from 'react-icons/im';
+import {
+  ImTwitter, ImFacebook, ImGooglePlus, ImVimeo, ImPinterest
+} from 'react-icons/im';
 import styles from './Navbar.module.css';
 import { userLogout } from '../features/user/userSlice';
 
@@ -38,9 +40,9 @@ const Navbar = () => {
 
   if (menu) {
     return (
-      <span className={styles.hamburger} onClick={() => toggleMenu()}>
+      <button type="button" className={styles.hamburger} onClick={() => toggleMenu()} onKeyDown={toggleMenu}>
         <GiHamburgerMenu />
-      </span>
+      </button>
     );
   }
 
@@ -48,9 +50,9 @@ const Navbar = () => {
     <div className={styles.sidebar}>
       <div className={styles.logo}>
         <p>Doctor&apos;s hub</p>
-        <span className={styles.closeBtn} onClick={() => toggleMenu()}>
+        <button type="button" className={styles.closeBtn} onClick={() => toggleMenu()} onKeyDown={toggleMenu}>
           <BiLeftArrow />
-        </span>
+        </button>
       </div>
       <div className={styles.navlinks}>
         <NavLink to="/" onClick={() => toggleMenu()}>
@@ -81,8 +83,9 @@ const Navbar = () => {
             type="button"
             className={styles.logoutbtn}
             onClick={() => {
-              logout(), toggleMenu();
-            }}>
+              logout(); toggleMenu();
+            }}
+          >
             Logout
           </button>
         ) : (

@@ -50,7 +50,8 @@ const AllDoctorView = () => {
             type="button"
             className="pg-btn pg-btn-left"
             onClick={() => setDoctorsNumber([0, 3])}
-            disabled={doctorsNumber[0] === 0}>
+            disabled={doctorsNumber[0] === 0}
+          >
             <BiLeftArrow />
           </button>
         </p>
@@ -70,7 +71,8 @@ const AllDoctorView = () => {
             type="button"
             className="pg-btn pg-btn-right"
             onClick={() => setDoctorsNumber([3, 6])}
-            disabled={doctorsNumber[1] === doctors.length}>
+            disabled={doctorsNumber[1] === doctors.length}
+          >
             <BiRightArrow />
           </button>
         </p>
