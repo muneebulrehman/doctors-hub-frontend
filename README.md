@@ -6,10 +6,10 @@ Visit the [Backend repo](https://github.com/muneebulrehman/doctors-hub-backend)
 
 ### Preview
 
-![Preview image Available Doctors](src\img\available-doc.jpeg)
-![Preview image Appointment](src\img\appointment.jpeg)
-![Preview image Booked Appointment](src\img\booked-appointment.jpeg)
-![Preview image Doctor-Info](src\img\doc-info.jpeg)
+![Preview image Available Doctors](src/img/available-doc.jpeg)
+![Preview image Appointment](src/img/appointment.jpeg)
+![Preview image Booked Appointment](src/img/booked-appointment.jpeg)
+![Preview image Doctor-Info](src/img/doc-info.jpeg)
 
 ### Live version
 
@@ -26,7 +26,7 @@ We are a team of three.
 
 1. [@Muneeb ul Rehman](https://github.com/muneebulrehman)
 2. [@Ezekiel Utshudi Eteta](https://github.com/EzekielUtshudi)
-3.[@Sangwa Didie](https://github.com/sangwa7)
+3. [@Sangwa Didie](https://github.com/sangwa7)
 
 ### Built with
 
