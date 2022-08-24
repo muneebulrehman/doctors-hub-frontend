@@ -5,7 +5,8 @@ import api from '../../config';
 const initialState = {
   user: null,
   loading: false,
-  error: ''
+  error: {},
+  loginError: ''
 };
 
 export const signUp = createAsyncThunk('user/signUp', async (user) => {
@@ -38,6 +39,12 @@ const userSlice = createSlice({
   reducers: {
     userLogout: (state) => {
       state.user = null;
+    },
+    userErrorClear: (state) => {
+      state.error = {};
+    },
+    loginErrorClear: (state) => {
+      state.loginError = '';
     }
   },
   extraReducers: (builder) => {
@@ -47,8 +54,15 @@ const userSlice = createSlice({
     builder.addCase(signUp.fulfilled, (state, action) => {
       state.user = action.payload;
       state.loading = false;
-      localStorage.setItem('username', action.payload.user.username);
-      localStorage.setItem('user_id', action.payload.user.id);
+      if (!action.payload.success) {
+        state.error = action.payload;
+        state.user = null;
+      }
+      if (action.payload.success) {
+        localStorage.setItem('username', action.payload.user.username);
+        localStorage.setItem('user_id', action.payload.user.id);
+        state.error = {};
+      }
     });
     builder.addCase(signUp.rejected, (state, action) => {
       state.error = action.error.message;
@@ -59,7 +73,11 @@ const userSlice = createSlice({
       state.loading = true;
     });
     builder.addCase(login.fulfilled, (state, action) => {
-      state.user = action.payload;
+      if (action.payload?.error) state.loginError = action.payload.error;
+      else {
+        state.user = action.payload;
+        state.loginError = '';
+      }
       state.loading = false;
     });
     builder.addCase(login.rejected, (state, action) => {
@@ -70,4 +88,4 @@ const userSlice = createSlice({
 });
 
 export default userSlice.reducer;
-export const { userLogout } = userSlice.actions;
+export const { userLogout, userErrorClear, loginErrorClear } = userSlice.actions;

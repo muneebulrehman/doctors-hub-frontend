@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { BiLeftArrow, BiRightArrow } from 'react-icons/bi';
-
+import { resetAppointment } from '../appointment/appointmentSlice';
 import { fetchDoctors } from './doctorSlice';
 import Loader from '../../components/loader/Loader';
+import { userErrorClear, loginErrorClear } from '../user/userSlice';
 import './doctors.css';
 
 const AllDoctorView = () => {
@@ -17,6 +18,9 @@ const AllDoctorView = () => {
 
   useEffect(() => {
     dispatch(fetchDoctors());
+    dispatch(resetAppointment());
+    dispatch(userErrorClear());
+    dispatch(loginErrorClear());
   }, []);
 
   const handleDoctors = () => {

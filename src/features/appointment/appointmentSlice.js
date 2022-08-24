@@ -28,6 +28,11 @@ export const createAppointment = createAsyncThunk('appointment/createAppointment
 const appointmentSlice = createSlice({
   name: 'appointment',
   initialState,
+  reducers: {
+    resetAppointment: (state) => {
+      state.appointment = {};
+    }
+  },
   extraReducers: (builder) => {
     builder.addCase(userAppointments.pending, (state) => {
       state.loading = true;
@@ -47,3 +52,4 @@ const appointmentSlice = createSlice({
 });
 
 export default appointmentSlice.reducer;
+export const { resetAppointment } = appointmentSlice.actions;

@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { BiLeftArrow } from 'react-icons/bi';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { toast } from 'react-toastify';
 import {
   ImTwitter, ImFacebook, ImGooglePlus, ImVimeo, ImPinterest
 } from 'react-icons/im';
@@ -17,7 +18,7 @@ const Navbar = () => {
   const [user, setUser] = useState('null');
 
   const toggleMenu = () => {
-    setMenu(!menu);
+    setMenu((prevState) => !prevState);
   };
 
   useEffect(() => {
@@ -36,6 +37,7 @@ const Navbar = () => {
     localStorage.removeItem('username');
     localStorage.removeItem('user_id');
     dispatch(userLogout());
+    toast.success('Logged out successfully');
   };
 
   if (menu) {
