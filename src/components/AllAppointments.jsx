@@ -34,6 +34,10 @@ const AllAppointments = () => {
     return <Loader />;
   }
 
+  if (appointments.length === 0) {
+    return <p className="newAppointment-warning">No appointments for you.</p>;
+  }
+
   return (
     <div className="body-holder">
       <div className="content">
