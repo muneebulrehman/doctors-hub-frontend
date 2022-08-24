@@ -16,3 +16,25 @@ Visit the [Backend repo](https://github.com/muneebulrehman/doctors-hub-backend)
 
 [Link](https://github.com/users/muneebulrehman/projects/1)
 [Kanban Board preview](https://github.com/muneebulrehman/doctors-hub-backend/issues)
+
+### Team information
+
+We are a team of three.
+
+1. [@Muneeb ul Rehman](https://github.com/muneebulrehman)
+2. [@Ezekiel Utshudi Eteta](https://github.com/EzekielUtshudi)
+3.[@Sangwa Didie](https://github.com/sangwa7)
+
+### Built with
+
+- ReactJs
+- Redux
+
+## Getting started
+
+#### Prerequisites
+
+- React
+- Redux
+- CSS
+- SCSS
