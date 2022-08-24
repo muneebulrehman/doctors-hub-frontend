@@ -1,46 +1,88 @@
-# Getting Started with Create React App and Redux
+# Doctors Hub frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+This is the front-end of the **Doctor's Hub** application built with ReactJs. It is a single page application which allows the user to book an appointment with available doctors. Responds to this [API](https://doctors-hub-backend.herokuapp.com/api).
 
-## Available Scripts
+Visit the [Backend repo](https://github.com/muneebulrehman/doctors-hub-backend)
 
-In the project directory, you can run:
+### Preview
 
-### `npm start`
+![Preview image Available Doctors](src/img/available-doc.jpeg)
+![Preview image Appointment](src/img/appointment.jpeg)
+![Preview image Booked Appointment](src/img/booked-appointment.jpeg)
+![Preview image Doctor-Info](src/img/doc-info.jpeg)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Live version
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+[Check Live version here](https://doctors-hub-frontend.netlify.app/)
 
-### `npm test`
+### Kanban Board
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[Link](https://github.com/users/muneebulrehman/projects/1)
+[Kanban Board preview](https://github.com/muneebulrehman/doctors-hub-backend/issues)
 
-### `npm run build`
+### Team information
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+We are a team of three.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. [@Muneeb ul Rehman](https://github.com/muneebulrehman)
+2. [@Ezekiel Utshudi Eteta](https://github.com/EzekielUtshudi)
+3. [@Sangwa Didie](https://github.com/sangwa7)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Built with
 
-### `npm run eject`
+- ReactJs
+- Redux
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Getting started
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Prerequisites
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- React
+- Redux
+- CSS
+- SCSS
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### Setup
 
-## Learn More
+Clone [this](git@github.com:muneebulrehman/doctors-hub-frontend.git) repo
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Navigate to the directory and run `npm install` to install the dependencies.
+- Run `npm start` to start the server.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Authors
+
+👤 **Muneeb Ul Rehman**
+
+- GitHub: [@Muneeb](https://github.com/muneebulrehman)
+- Twitter: [@NeatCoder\_](https://twitter.com/NeatCoder_)
+- LinkedIn: [Muneeb](https://www.linkedin.com/in/muneebulrehman/)
+
+👤 **Ezekiel Utshudi**
+
+- GitHub: [@EzekielUtshudi](https://github.com/EzekielUtshudi)
+- Twitter: [@UtshudiEzekiel](https://twitter.com/UtshudiEzekiel)
+- LinkedIn: [@ezekiel-utshudi](https://www.linkedin.com/in/ezekiel-utshudi-195782162/)
+
+👤 **Sangwa Didier**
+
+- GitHub: [Didier Sangwa](https://github.com/sangwa7)
+- Twitter: [@sangwa_7](https://twitter.com/sangwa_7)
+- LinkedIn: [Didier Sangwa](https://www.linkedin.com/in/didier-sangwa)
+
+### 🤝 Contributions
+
+Contributions, issues, and feature requrests are welcome!
+
+Feel free to check the [issues page](https://github.com/muneebulrehman/doctors-hub-frontend/issues).
+
+### Show your support
+
+Give a ⭐ if you like the project.
+
+### Acknowledgments
+
+Thanks to [Murat Korkmaz](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign) for providing the design.
+
+### 📝 License
+
+This project is MIT licensed.
