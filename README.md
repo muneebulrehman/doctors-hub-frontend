@@ -26,7 +26,7 @@ We are a team of three.
 
 1. [@Muneeb ul Rehman](https://github.com/muneebulrehman)
 2. [@Ezekiel Utshudi Eteta](https://github.com/EzekielUtshudi)
-3.[@Sangwa Didie](https://github.com/sangwa7)
+3. [@Sangwa Didie](https://github.com/sangwa7)
 
 ### Built with
 
