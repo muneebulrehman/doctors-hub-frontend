@@ -1,0 +1,14 @@
+.content h2 {
+    color: white;
+    margin-left: 40px;
+  }
+  
+  .card {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+    box-shadow: 2px 2px 4px #000000;
+  }
+
+  
