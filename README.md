@@ -6,7 +6,10 @@ Visit the [Backend repo](https://github.com/muneebulrehman/doctors-hub-backend)
 
 ### Preview
 
-![Preview image](./)
+![Preview image Available Doctors](src\img\available-doc.jpeg)
+![Preview image Appointment](src\img\appointment.jpeg)
+![Preview image Booked Appointment](src\img\booked-appointment.jpeg)
+![Preview image Doctor-Info](src\img\doc-info.jpeg)
 
 ### Live version
 
