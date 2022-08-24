@@ -17,6 +17,8 @@
 }
 
 .hamburger {
+  border: none;
+  background: none;
   margin-top: 1rem;
   padding: 1rem;
   font-size: 2rem;
@@ -27,6 +29,7 @@
 }
 
 .closeBtn {
+  border: none;
   padding: 1rem 2rem;
   background-color: #97bf0f;
   color: white;

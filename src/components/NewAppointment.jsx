@@ -48,9 +48,11 @@ const NewAppointment = () => {
           <hr />
           <h3>There are a lot of doctors. Choose one</h3>
           <form onSubmit={inputHandler} className="newAppointment-form">
-            <label htmlFor="doctors">Choose a doctor</label>
+            {/* <label htmlFor="doctors">Choose a doctor</label> */}
+            <p>Choose a doctor</p>
             <Select className="selectDoctor" options={options} onChange={handleOptions} />
-            <label htmlFor="date">Choose a date</label>
+            {/* <label htmlFor="date">Choose a date</label> */}
+            <p>Choose a date</p>
             <input type="date" id="date" name="date" onChange={(e) => setDate(e.target.value)} />
             <button type="submit"> Create Appointment </button>
           </form>
