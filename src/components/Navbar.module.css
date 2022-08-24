@@ -17,10 +17,13 @@
 }
 
 .hamburger {
+  margin-top: 1rem;
   padding: 1rem;
   font-size: 2rem;
   cursor: pointer;
-  width: fit-content;
+  position: absolute;
+  left: 10px;
+  top: 10px;
 }
 
 .closeBtn {

@@ -38,9 +38,9 @@ const Navbar = () => {
 
   if (menu) {
     return (
-      <p className={styles.hamburger} onClick={() => toggleMenu()}>
+      <span className={styles.hamburger} onClick={() => toggleMenu()}>
         <GiHamburgerMenu />
-      </p>
+      </span>
     );
   }
 
@@ -48,9 +48,9 @@ const Navbar = () => {
     <div className={styles.sidebar}>
       <div className={styles.logo}>
         <p>Doctor&apos;s hub</p>
-        <p className={styles.closeBtn} onClick={() => toggleMenu()}>
+        <span className={styles.closeBtn} onClick={() => toggleMenu()}>
           <BiLeftArrow />
-        </p>
+        </span>
       </div>
       <div className={styles.navlinks}>
         <NavLink to="/" onClick={() => toggleMenu()}>

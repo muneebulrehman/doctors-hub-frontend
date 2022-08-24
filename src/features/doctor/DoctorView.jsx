@@ -13,7 +13,6 @@ const DoctorView = () => {
   // const loading = useSelector((state) => state.doctor.loading);
   const dispatch = useDispatch();
   const { doctorId } = useParams();
-  console.log(doctorId);
   useEffect(() => {
     dispatch(fetchSingleDoctor(doctorId));
   }, []);
@@ -42,7 +41,7 @@ const DoctorView = () => {
           </div>
           <h3 style={{ textAlign: 'left', fontWeight: 'bold', marginTop: '1.25rem' }}>Bio</h3>
           <p className="doctor-bio">{doctor.bio}</p>
-          <Link to="/new_appointment" className="doctorView-reserve">
+          <Link to="/create-appointment" className="doctorView-reserve">
             Book An Appointment ➡️
           </Link>
         </div>
