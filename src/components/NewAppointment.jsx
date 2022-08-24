@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux/es/exports';
 import Select from 'react-select';
 import { createAppointment } from '../features/appointment/appointmentSlice';
+import './newappointment.css';
 
 const NewAppointment = () => {
   const [date, setDate] = useState('');
