@@ -38,3 +38,10 @@ We are a team of three.
 - Redux
 - CSS
 - SCSS
+
+#### Setup
+
+Clone [this](git@github.com:muneebulrehman/doctors-hub-frontend.git) repo
+
+- Navigate to the directory and run `npm install` to install the dependencies.
+- Run `npm start` to start the server.
