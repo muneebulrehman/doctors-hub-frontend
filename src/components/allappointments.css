@@ -11,4 +11,8 @@
     box-shadow: 2px 2px 4px #000000;
   }
 
+  .card .card-holder img {
+    width: 100%;
+    border-radius: 20px;
+  }
   
