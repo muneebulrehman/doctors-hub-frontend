@@ -15,7 +15,6 @@
 .newAppointments-container {
   display: flex;
   flex-direction: column;
-  margin: 20px;
 }
 
 .holder {
@@ -43,9 +42,10 @@
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
-  margin: 20px;
+  padding: 1.25rem;
   font-weight: 500;
   color: white;
+  text-align: center;
 }
 
 .holder h3 {
@@ -60,24 +60,25 @@
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
-  margin: 20px;
+  padding: 1.25rem;
   font-weight: 400;
   color: white;
+  text-align: center;
 }
 
-form {
+.holder form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-form label {
+.holder form label {
   color: white;
-  margin: 15px;
+  margin-bottom: 2rem;
   font-weight: bold;
 }
 
-form input {
+.holder form input {
   width: 60%;
   height: 40px;
   border-radius: 5px;
@@ -85,16 +86,18 @@ form input {
   color: black;
   font-size: 18px;
   font-weight: lighter;
+  margin-bottom: 2rem;
 }
 
-form .selectDoctor {
+.holder form .selectDoctor {
   width: 60%;
   height: 40px;
   border-radius: 5px;
   border: none;
+  margin-bottom: 2rem;
 }
 
-form button {
+.holder form button {
   width: 60%;
   height: 40px;
   border-radius: 5px;
@@ -102,4 +105,26 @@ form button {
   margin-top: 30px;
   color: black;
   font-weight: bold;
+}
+
+@media screen and (min-width: 762px) {
+  .holder form input {
+    width: 40%;
+  }
+
+  .holder form .selectDoctor {
+    width: 40%;
+  }
+
+  .holder form button {
+    width: 40%;
+  }
+}
+
+.newAppointment-warning {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+  color: rgb(238, 83, 83);
 }

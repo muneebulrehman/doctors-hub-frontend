@@ -15,7 +15,8 @@
 
 .content h2 {
   color: white;
-  margin-left: 40px;
+  text-align: center;
+  padding: 2rem 0;
 }
 
 .card {
@@ -53,4 +54,5 @@
 .card p {
   color: orange;
   margin: 25px;
+  font-weight: bold;
 }
