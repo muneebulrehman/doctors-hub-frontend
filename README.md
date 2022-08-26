@@ -6,19 +6,18 @@ Visit the [Backend repo](https://github.com/muneebulrehman/doctors-hub-backend)
 
 ### Preview
 
-![Preview image Available Doctors](src/img/available-doc.jpeg)
-![Preview image Appointment](src/img/appointment.jpeg)
-![Preview image Booked Appointment](src/img/booked-appointment.jpeg)
-![Preview image Doctor-Info](src/img/doc-info.jpeg)
+![Preview image Available Doctors](img/available-doc.jpeg)
+![Preview image Appointment](img/appointment.jpeg)
+![Preview image Booked Appointment](img/booked-appointment.jpeg)
+![Preview image Doctor-Info](img/doc-info.jpeg)
 
 ### Live version
 
 [Check Live version here](https://doctors-hub-frontend.netlify.app/)
 
 ### Kanban Board
-
+![Initial state of Kanban board.](img/initial-kanban.png)
 [Link](https://github.com/users/muneebulrehman/projects/1)
-[Kanban Board preview](https://github.com/muneebulrehman/doctors-hub-backend/issues)
 
 ### Team information
 
