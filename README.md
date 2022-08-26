@@ -17,7 +17,7 @@ Visit the [Backend repo](https://github.com/muneebulrehman/doctors-hub-backend)
 
 ### Kanban Board
 ![Initial state of Kanban board.](img/initial-kanban.png)
-[Link](https://github.com/users/muneebulrehman/projects/1)
+[Link](https://github.com/users/muneebulrehman/projects/3)
 
 ### Team information
 
